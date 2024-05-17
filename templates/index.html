@@ -3,6 +3,27 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <h2>Home</h2>
-    <p>Seja bem-vindo ao meu site!</p>
+<h2>Home</h2>
+<p>Seja bem-vindo ao meu site!</p>
+
+<div class="container">
+    <div class="column left-column">
+        <h2>Fazemos algo aqui</h2>
+        <p>Para ver o resultado do outro lado.</p>
+        <button hx-get="{{url_for('hora_certa')}}" hx-target="#time-container" hx-swap="innerHTML"
+                hx-indicator="#processando">Ver as horas</button>
+
+    </div>
+    <div class="column right-column">
+        <h1>Tempo atual</h1>
+        <div id="time-container">
+            <img class="htmx-indicator blinking" id="processando"
+                src="{{url_for('static', filename='img/robo_esperando.webp')}}" style="max-width: 80;" />
+        </div>
+    </div>
+</div>
+
+
+</body>
+
 {% endblock %}
