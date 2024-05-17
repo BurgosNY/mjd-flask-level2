@@ -1,0 +1,14 @@
+/* styles.css */
+
+.titulo {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333333;
+  } 
+
+.texto {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    color: #555555;
+  }

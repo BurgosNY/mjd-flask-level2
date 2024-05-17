@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Aventuras em Flask - parte 2</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        Alguma coisa{% endblock %}
+    </main>
+    <footer>
+        <p>@Galera do MJD</p>
+    </footer>
+</html>
