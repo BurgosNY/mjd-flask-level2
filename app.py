@@ -1,11 +1,19 @@
 from flask import Flask, render_template
 from datetime import datetime
+from jogadores import jogadores
+import jinja_partials
 app = Flask(__name__)
+jinja_partials.register_extensions(app)
 
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/jogadores')
+def lista_jogadores():
+   return render_template('jogadores.html', jogadores=jogadores)
 
 
 @app.route('/hora_certa')

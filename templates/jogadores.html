@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Jogadores{% endblock %}
+{% block content %}
+
+<div>
+
+    {% for jogador in jogadores %}
+
+    {{ render_partial('card_jogador.html',
+        nome_jogador=jogador.nome,
+        numero_camisa=jogador['número de camisa'],
+        time=jogador.time_principal) }}
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
